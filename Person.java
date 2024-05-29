@@ -23,6 +23,7 @@ public class Person {
     public boolean hasAge() {
         return age >= 0;
     }
+
     public boolean hasAddress() {
         return address != null;
     }
@@ -38,7 +39,9 @@ public class Person {
     public OptionalInt getAge() {
         if (hasAge()) {
             return OptionalInt.of(age);
-        } else { return OptionalInt.empty(); }
+        } else {
+            return OptionalInt.empty();
+        }
     }
 
     public String getAddress() {
@@ -81,3 +84,4 @@ public class Person {
         return Objects.hash(name, surname);
     }
 }
+
